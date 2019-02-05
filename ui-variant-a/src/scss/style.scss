@@ -1,0 +1,14 @@
+$primary-light-background: #ffffff;
+$primary-dark-color: #000000;
+$primary-dark-background: #0b7b6a;
+$primary-light-color: #ffffff;
+
+.container-fluid {
+    background: $primary-light-background;
+	color: $primary-dark-color;
+}
+
+.container {
+	background: $primary-dark-background;
+	color: $primary-light-color;
+}
