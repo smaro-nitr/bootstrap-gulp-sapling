@@ -10,17 +10,17 @@ const gulpUglify = require('gulp-uglify');
 
 /* clean dist folder */
 function clean() {
-    return del(['dist']);
+    return del(['app/dist']);
 }
 
 /* inject html into browser */
 function htmlBundler() {
-    return src(['src/*.html'])
+    return src(['app/src/*.html'])
         .pipe(gulpHtmlmin({
             caseSensitive: true,
             removeComments: true
         }))
-        .pipe(dest('dist'))
+        .pipe(dest('app/dist'))
         .pipe(browserSync.stream());
 }
 
@@ -34,11 +34,11 @@ function scssBundler() {
     return src([
 			'node_modules/mdbootstrap/css/bootstrap.min.css', 
 			'node_modules/mdbootstrap/css/mdb.min.css', 
-			'src/assets/scss/*.scss'
+			'app/src/assets/scss/*.scss'
 		])
         .pipe(gulpIf(isSassFile, gulpSass()))
         .pipe(gulpCsso())
-        .pipe(dest('dist/assets/css'))
+        .pipe(dest('app/dist/assets/css'))
         .pipe(browserSync.stream());
 }
 
@@ -49,16 +49,16 @@ function jsBundler() {
             'node_modules/mdbootstrap/js/popper.min.js',
             'node_modules/mdbootstrap/js/bootstrap.min.js',
             'node_modules/mdbootstrap/js/mdb.min.js',
-            'src/assets/js/*.js'
+            'app/src/assets/js/*.js'
         ])
         .pipe(gulpUglify())
-        .pipe(dest('dist/assets/js'))
+        .pipe(dest('app/dist/assets/js'))
         .pipe(browserSync.stream());
 }
 
 /* compress image */
 function imgCompression() {
-    return src(['src/assets/img/**/*'])
+    return src(['app/src/assets/img/**/*'])
         .pipe(gulpImagemin([
             gulpImagemin.gifsicle({interlaced: true}),
             gulpImagemin.jpegtran({progressive: true}),
@@ -70,20 +70,20 @@ function imgCompression() {
                 ]
             })
         ]))
-        .pipe(dest('dist/assets/img'));
+        .pipe(dest('app/dist/assets/img'));
 }
 
 /* static server + watching html/scss/js file */
 function serve() {
     browserSync.init({
-        server: 'dist',
+        server: 'app/dist',
         port: 3000
     })
 
-    watch(['src/*.html'], htmlBundler)
-    watch(['src/assets/scss/*.scss'], scssBundler)
-    watch(['src/assets/js/*.js'], jsBundler)
-    watch(['src/assets/img/**/*'], imgCompression)
+    watch(['app/src/*.html'], htmlBundler)
+    watch(['app/src/assets/scss/*.scss'], scssBundler)
+    watch(['app/src/assets/js/*.js'], jsBundler)
+    watch(['app/src/assets/img/**/*'], imgCompression)
     .on('change', browserSync.reload);
 }
 
