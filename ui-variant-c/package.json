@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/gulp default"
   },
-  "author": "Subhendu Kumar Sahoo",
+  "author": "Subhendu Kumar Sahoo <smaro.nitr@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
     "mdbootstrap": "^4.7.3"

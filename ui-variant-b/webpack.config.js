@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
+    './app/index.html',
     './app/src/scss/style.scss', 
     './app/src/js/script.js'
   ],
