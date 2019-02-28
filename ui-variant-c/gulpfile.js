@@ -77,7 +77,7 @@ function imgCompression() {
 function serve() {
     browserSync.init({
         server: 'app/dist',
-        port: 3000
+        port: 3002
     })
 
     watch(['app/src/*.html'], htmlBundler)

@@ -1,13 +1,13 @@
-@import "@material/textfield/mdc-text-field";
+@import "@material/layout-grid/mdc-layout-grid";
+
+$primary-light-background: #ffffff;
+$primary-dark-color: #000000;
+$primary-dark-background: #0b7b6a;
+$primary-light-color: #ffffff;
 
 body {
-    background: #9aa09d;
-}
-
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
-    border-color: rgb(223, 223, 0) !important;
-}
-
-.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: rgb(223, 223, 0) !important;
+    font-family: Arial, Helvetica, sans-serif;
+	background: $primary-dark-background;
+    color: $primary-light-color;
+    text-align: center;
 }

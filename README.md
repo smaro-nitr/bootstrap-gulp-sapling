@@ -7,7 +7,7 @@
 > * Bootstrap 4
 > * Gulp 4 (with BrowserSync)
 
-## ui-variant-b (last update : )
+## ui-variant-b (last update : 28th Feb 2019 )
 > * Google Material 0.88
 > * Webpack 3 (with Webpack Dev Server)
 
