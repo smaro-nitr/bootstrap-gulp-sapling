@@ -4,7 +4,7 @@ const del = require('del');
 const gulpCsso = require('gulp-csso');
 const gulpHtmlmin = require('gulp-htmlmin');
 const gulpIf = require('gulp-if');
-const gulpImagemin = require('gulp-imagemin')
+const gulpImagemin = require('gulp-imagemin');
 const gulpSass = require('gulp-sass');
 const gulpUglify = require('gulp-uglify');
 
@@ -18,7 +18,6 @@ function htmlBundler() {
     return src(['src/*.html'])
         .pipe(gulpHtmlmin({
             caseSensitive: true,
-            collapseWhitespace: true,
             removeComments: true
         }))
         .pipe(dest('dist'))
@@ -31,7 +30,6 @@ function isSassFile(file) {
 }
 
 /* convert sass into css and inject it into browser along with css */
-/* note : avoid using scss and css extension file with same name */
 function scssBundler() {
     return src([
 			'node_modules/mdbootstrap/css/bootstrap.min.css', 
@@ -90,4 +88,3 @@ function serve() {
 }
 
 exports.default = series(clean, parallel(htmlBundler, scssBundler, jsBundler, imgCompression), serve);
-

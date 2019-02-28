@@ -2,7 +2,6 @@
 
 ## Technology
 > * Bootstrap 4
-> * SweetAlert
 > * Gulp 4 (with BrowserSync)
 
 ## Dependency 

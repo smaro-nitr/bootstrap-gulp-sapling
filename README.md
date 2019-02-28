@@ -3,9 +3,8 @@
 > * Developer : Subhendu Kumar Sahoo 
 > * Email : <smaro.nitr@gmail.com>
 
-## ui-variant-a (last update : )
+## ui-variant-a (last update : 28th Feb 2019 )
 > * Bootstrap 4
-> * SweetAlert
 > * Gulp 4 (with BrowserSync)
 
 ## ui-variant-b (last update : )
