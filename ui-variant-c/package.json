@@ -1,0 +1,25 @@
+{
+  "name": "ui-variant-c",
+  "version": "1.0.0",
+  "description": "project starter template with basic configuration of md bootstrap 4.7.3 and gulp 4 with browsersync",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp default"
+  },
+  "author": "Subhendu Kumar Sahoo",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "mdbootstrap": "^4.7.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  }
+}
