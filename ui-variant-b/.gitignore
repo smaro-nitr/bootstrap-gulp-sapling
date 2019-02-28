@@ -1,2 +1,3 @@
-app/dist
+assets/css/bundle.css
+assets/js/bundle.js
 node_modules

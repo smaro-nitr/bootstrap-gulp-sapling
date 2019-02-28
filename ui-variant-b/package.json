@@ -4,9 +4,10 @@
   "description": "project starter template with basic configuration of google material design and webpack 3 with webpack-dev-server",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -p & webpack-dev-server --open"
+    "build": "webpack -p",
+    "start": "webpack-dev-server --open"
   },
-  "author": "Subhendu Kumar Sahoo",
+  "author": "Subhendu Kumar Sahoo <smaro.nitr@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
     "material-components-web": "^0.44.0"

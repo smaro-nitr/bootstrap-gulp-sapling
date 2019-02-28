@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import "@material/layout-grid/mdc-layout-grid";
 
 $primary-light-background: #ffffff;
@@ -10,4 +11,9 @@ body {
 	background: $primary-dark-background;
     color: $primary-light-color;
     text-align: center;
+}
+
+*:not(.material-icons) {
+    font-size: 14px; 
+    font-family: 'Lato', sans-serif !important;
 }
